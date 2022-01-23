@@ -8,27 +8,45 @@
     <title>Document</title>
 </head>
 <body>
-    <form>
-        <fieldset>
-            <legend>Movie Ratings</legend>
-            <label for="movieTitle">Movie Title:</label>
-            <input type="text" id="movieTitle" name="movieTitle"><br><br>
-            <label for="yearRelease">Year Released</label>
-            <input type="text" id="yearRelease" name="yearRelease"><br><br>
-            <label for="rating">Rate movie from 1-5. (1 being worst, 5 being best)</label>
-            <select name="rating" id="rating">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-            </select>
-
-        </fieldset>
-
-
+    <form id = "mainFrom" onsubmit="return false">
+       
+    <fieldset>
+        <legend>Movie Ratings</legend>
+        <br>
+        <label for="movieTitle">Movie Title:</label>
+        <input type="text" id="movieTitle" name="movieTitle" > <br><br>
+        <label for="yearRelease">Year Released</label>
+        <input type="text" id="yearRelease" name="yearRelease" ><br><br>
+        <label for="rating">Rate movie from 1-5. (1 being worst, 5 being best)</label>
+        <select name="rating" id="rating">
+            <option value="1">1</option>
+            <option value="2" selected>2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+        <br><br>
+        <input type="submit" id ="addMovie" value="Submit" onclick="Submit()">
+    </fieldset>
+    
     </form>
     
-<script src="script.js"></script>
+    <br><br>
+    <div id="showMovies">
+    <button type="button" id="show">Show My Movies</button>
+    <br>
+    <br>
+    <textarea rows="10" cols="60" id="output" >
+    </textarea>
+    </div>
+    
+
+    
+    <script src="script.js"></script>
+
+    
+
 </body>
+
 </html>
+
