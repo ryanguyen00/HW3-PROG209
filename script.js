@@ -22,7 +22,7 @@ function Submit() {
     let aMovieTitle = document.getElementById("movieTitle").value;
     let aYearReleased = document.getElementById("yearRelease").value;
     let e = document.getElementById("rating");
-    let tester = e.options[e.selectedIndex].value;
+    let optionSelected = e.options[e.selectedIndex].value;
 
     if ((aMovieTitle.trim() == '') || (aYearReleased.trim() == '')) {
         alert("Please fill out all fields");
@@ -32,9 +32,11 @@ function Submit() {
         let Movie = {
             title:  aMovieTitle,
             year: aYearReleased,
-            rating: tester
+            rating: optionSelected
         }
         
+         document.getElementById("movieTitle").value = "";
+         document.getElementById("yearRelease").value= "";
         movieArray.push(Movie);
         console.log(movieArray);
         
